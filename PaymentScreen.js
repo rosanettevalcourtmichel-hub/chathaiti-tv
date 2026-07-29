@@ -6,10 +6,10 @@ export default function PaymentScreen() {
   const [transactionID, setTransactionID] = useState('');
   const [selectedProvider, setSelectedProvider] = useState('Natcash');
 
-  // Nimewo pèman yo (ou ka konfigire yo la a)
+  // Nimewo pèman ou an pou tout sèvis yo
   const phoneNumbers = {
-    Natcash: '+509 4000-0000',
-    MonCash: '+509 3000-0000',
+    Natcash: '+509 33848670',
+    MonCash: '+509 33848670',
   };
 
   const handleConfirmPayment = () => {
@@ -17,7 +17,7 @@ export default function PaymentScreen() {
       alert('Tanpri antre ID / Kòd tranzaksyon an anvan w konfime.');
       return;
     }
-    alert(`Mèsi! Nou resevwa ID Tranzaksyon ou an (${transactionID}). N ap konfime pèman an sou Natcash/MonCash nan yon ti moman.`);
+    alert(`Mèsi! Nou resevwa ID Tranzaksyon ou an (${transactionID}). N ap konfime pèman an sou ${selectedProvider} (+509 33848670) nan yon ti moman.`);
   };
 
   return (
@@ -84,3 +84,4 @@ const styles = StyleSheet.create({
   confirmBtn: { backgroundColor: '#27ae60', padding: 15, borderRadius: 8, alignItems: 'center' },
   confirmText: { color: '#FFF', fontSize: 16, fontWeight: 'bold' },
 });
+   
